@@ -180,13 +180,13 @@ $entry = new LabelEntry("Probably can fit a huge wall of text here?");
 #### 4. Slider
 Lets players choose a value between two numbers using a slider to select.
 ```php
-$entry = new Slider([
+$entry = new Slider(
 	"How would you rate our suicide prevention?", // <- title
 	0.0, // <- minimum value
 	10.0, // <- maximum value
 	0.5, // <- step size,
 	10.0 // <- default value
-]);
+);
 ```
 
 #### 5. Step Slider
