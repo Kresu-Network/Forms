@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace cosmicpe\form\entries\custom;
 
 use cosmicpe\form\entries\ModifyableEntry;
-use Ds\Set;
 use InvalidArgumentException;
 
 final class DropdownEntry implements CustomFormEntry, ModifyableEntry{
@@ -13,7 +12,7 @@ final class DropdownEntry implements CustomFormEntry, ModifyableEntry{
 	/** @var string */
 	private $title;
 
-	/** @var array<string> */
+	/** @var array */
 	private $options;
 
 	/** @var int */
@@ -21,7 +20,7 @@ final class DropdownEntry implements CustomFormEntry, ModifyableEntry{
 
 	public function __construct(string $title, array $options){
 		$this->title = $title;
-		$this->options = $options;
+		$this->options = array_values($options);
 	}
 
 	public function getValue() : string{
