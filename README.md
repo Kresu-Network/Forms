@@ -152,12 +152,12 @@ These forms don't contain buttons. As of now, there are 6 types of entries you c
 #### 1. Dropdown
 The closest alternative to buttons. Dropdowns let players select an option from a list of options.
 ```php
-$entry = new DropdownEntry(
+$entry = new DropdownEntry([
 	"What's your gender?", // the first parameter is the name of the dropdown
 	"Male", // the next parameters are the dropdown options
 	"Female",
 	"Prefer not to answer"
-);
+]);
 $entry->setDefault("Prefer not to answer");
 ```
 
@@ -180,24 +180,24 @@ $entry = new LabelEntry("Probably can fit a huge wall of text here?");
 #### 4. Slider
 Lets players choose a value between two numbers using a slider to select.
 ```php
-$entry = new Slider(
+$entry = new Slider([
 	"How would you rate our suicide prevention?", // <- title
 	0.0, // <- minimum value
 	10.0, // <- maximum value
 	0.5, // <- step size,
 	10.0 // <- default value
-);
+]);
 ```
 
 #### 5. Step Slider
 Resemble sliders, but their value is a string.
 ```php
-$entry = new StepSlider(
+$entry = new StepSlider([
 	"Brain size", // <- title
 	"Small", // <- the next parameters are steps in order
 	"Medium",
 	"Large"
-);
+]);
 $entry->setDefault("Medium");
 ```
 
