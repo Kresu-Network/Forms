@@ -6,7 +6,6 @@ namespace cosmicpe\form\entries\custom;
 
 use ArgumentCountError;
 use cosmicpe\form\entries\ModifyableEntry;
-use Ds\Set;
 use InvalidArgumentException;
 
 final class StepSliderEntry implements CustomFormEntry, ModifyableEntry{
@@ -14,15 +13,15 @@ final class StepSliderEntry implements CustomFormEntry, ModifyableEntry{
 	/** @var string */
 	private $title;
 
-	/** @var Set<string> */
+	/** @var array<string> */
 	private $steps;
 
 	/** @var int */
 	private $default = 0;
 
-	public function __construct(string $title, string ...$steps){
+	public function __construct(string $title, array $steps){
 		$this->title = $title;
-		$this->steps = new Set($steps);
+		$this->steps = $steps;
 	}
 
 	public function getValue() : string{
