@@ -13,15 +13,15 @@ final class DropdownEntry implements CustomFormEntry, ModifyableEntry{
 	/** @var string */
 	private $title;
 
-	/** @var Set<string> */
+	/** @var array<string> */
 	private $options;
 
 	/** @var int */
 	private $default = 0;
 
-	public function __construct(string $title, string ...$options){
+	public function __construct(string $title, array $options){
 		$this->title = $title;
-		$this->options = new Set($options);
+		$this->options = $options;
 	}
 
 	public function getValue() : string{
