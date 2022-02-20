@@ -13,7 +13,7 @@ final class StepSliderEntry implements CustomFormEntry, ModifyableEntry{
 	/** @var string */
 	private $title;
 
-	/** @var array<string> */
+	/** @var array */
 	private $steps;
 
 	/** @var int */
@@ -21,7 +21,7 @@ final class StepSliderEntry implements CustomFormEntry, ModifyableEntry{
 
 	public function __construct(string $title, array $steps){
 		$this->title = $title;
-		$this->steps = $steps;
+		$this->steps = array_values($steps);
 	}
 
 	public function getValue() : string{
