@@ -33,7 +33,7 @@ final class StepSliderEntry implements CustomFormEntry, ModifyableEntry{
 	}
 
 	public function validateUserInput($input) : void{
-		if(!is_int($input) || $input < 0 || $input >= $this->steps->count()){
+		if(!is_int($input) || $input < 0 || $input >= count($this->steps)){
 			throw new InvalidArgumentException("Failed to process invalid user input: " . $input);
 		}
 	}
