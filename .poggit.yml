@@ -1,0 +1,10 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Kresu-Network/Forms
+build-by-default: true
+branches:
+- patch-1
+projects:
+  Forms:
+    path: ""
+    model: virion
+    type: library
+...
